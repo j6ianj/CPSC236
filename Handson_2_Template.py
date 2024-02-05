@@ -51,32 +51,20 @@
 # | D |	60-66 |
 # | F |	<60 |
 
-# In[25]:
+# In[1]:
 
 
-print("Letter Grade Converter", end= "\n")
+print("Tip Calculator\n")
+cost=float(input("Cost of meal: "))
+print()
 
-while True :
-    grade = int(input("\nEnter numerical grade: "))
-    if grade >= 88 and grade <= 100 :
-        print("Letter Grade: A", end="\n\n")
-    elif grade < 88 and grade >= 80 :
-        print("Letter Grade: B", end="\n\n")
-    elif grade < 80 and grade >= 67 :
-        print("Letter Grade: C", end="\n\n")
-    elif grade < 67 and grade >= 60 :
-        print("Letter Grade: D", end="\n\n")
-    elif grade < 60 :
-        print("Letter Grade: F", end="\n\n")
-    
-    choice= input("Continue? (y/n): ")
-    if choice == "y" or choice == "Y" :
-            continue
-    elif choice == "n" or choice == "N" :
-            break
-            
-print("\n\nBye")
-        
+for i in range(15,30,5):
+    perc = i / 100
+    tip = cost * perc
+    total = tip + cost
+    print(i,"%",sep="")
+    print("Tip amount: ", round(tip,2))
+    print("Total amount: ", round(total,2))
 
 
 # ## 3.2 - Tip Calculator
@@ -108,20 +96,32 @@ print("\n\nBye")
 # 
 # 
 
-# In[39]:
+# In[2]:
 
 
-print("Tip Calculator\n")
-cost=float(input("Cost of meal: "))
-print()
+print("Letter Grade Converter", end="\n")
 
-for i in range(15,30,5) :
-    perc = i / 100
-    tip = cost * perc
-    total = tip + cost
-    print(i,"%", sep="")
-    print("Tip amount: ", round(tip,2))
-    print("Total amount: ", round(total,2))
+while True :
+    grade = int(input("\nEnter a numerical grade: "))
+    if grade >= 88 and grade <= 100 :
+        print("Letter Grade: A", end="\n\n")
+    elif grade < 88 and grade >= 80 :
+        print("Letter Grade: B", end="\n\n")
+    elif grade < 80 and grade >= 67 :
+        print("Letter Grade: C", end="\n\n")
+    elif grade < 67 and grade >= 60 :
+        print("Letter Grade: D", end="\n\n")
+    elif grade < 60 :
+        print("Letter Grade: F", end="\n\n")
+        
+    choice= input("Continue?(y/n): ")
+    if choice == "y" or choice == "Y" :
+        continue
+    elif choice == "n" or choice == "N" :
+        break
+
+print("\n\nBye")
+    
 
 
 # ## 3.3 - Change Calculator
@@ -158,10 +158,29 @@ for i in range(15,30,5) :
 # - The program should continue only if the user enters “y” or “Y” to continue.
 # 
 
-# In[3]:
+# In[13]:
 
 
-### CODE HERE ###
+print("Chnage Calculator\n")
+while True: 
+    cents= int(input("Enter number of cents (0-99): "))
+    quarters = cents // 25
+    cents = cents - (25 * quarters)
+    dimes= cents // 10
+    cents = cents - (10 * dimes)
+    nickels = cents // 5
+    cents = cents - (5 * nickels)
+    penn = cents 
+    print("Quarters:",quarters, end="\n")
+    print("Dimes:",dimes, end="\n")
+    print("Nickels:",nickels, end="\n")
+    print("Pennies:",penn, end="\n")
+    choice= input("Continue?(y/n): ")
+    if choice == "y" or choice == "Y" :
+        continue
+    elif choice == "n" or choice == "N" :
+        break
+print("\nBye!")
 
 
 # ## 3.4 - Table of Powers
@@ -201,8 +220,28 @@ for i in range(15,30,5) :
 # - Make sure the user enters a start integer that’s less than the stop integer. If the user enters a start integer that’s greater than the stop integer, display an error message and give the user a chance to enter the integers again.
 # 
 
+# In[25]:
+
+
+print("Table of Powers\n")
+start=int(input("Start Number: "))
+stop=int(input("Stop Number: "))
+if start > stop :
+    print("Error: Enter a start number less than stop number.")
+    start=int(input("Start Number: "))
+    stop=int(input("Stop Number: "))
+print("\nNumber","Squared","Cubed", sep="  ")
+print("======","======","=====", sep="  ")
+for i in range(start,stop+1) :
+    print(i,i*i,i*i*i, sep="\t ")
+
+
+    
+    
+
+
 # In[ ]:
 
 
-### CODE HERE ###
+
 
