@@ -1,4 +1,2 @@
-a crossbow
-a crossbow
-a scroll of uncursing
-a scroll of invisibility
+a wizard hat
+a cloak of invisibility
